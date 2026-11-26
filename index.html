@@ -45,6 +45,9 @@ h1,h2,h3{font-family:var(--tit);font-style:italic;font-weight:800;line-height:.9
 .ban h1 em{color:var(--red);font-style:italic}
 .tag{font-size:21px;margin:14px 0 6px}
 .hero p{max-width:50ch;color:var(--mute);margin:8px 0 22px}
+.hacts{display:flex;flex-wrap:wrap;gap:10px 12px}
+@media(pointer:coarse){.hacts .btn{padding-top:14px;padding-bottom:14px}}
+.hero .join{font-size:14px;line-height:1.5;max-width:46ch;margin:14px 0 0}
 .btn{display:inline-block;font:600 15px var(--ui);padding:12px 22px;background:var(--red);color:#fff;border:0;text-decoration:none;cursor:pointer;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%);padding-right:30px}
 .btn.k{background:var(--ink);color:var(--bg)}
 .stripes{height:14px;width:110px;background:repeating-linear-gradient(115deg,var(--red) 0 6px,transparent 6px 12px);margin-top:26px}
@@ -155,7 +158,8 @@ const home=()=>`
     <div class="ban"><h1><em>Clube de leitura</em><br>Inconfidentes</h1></div>
     <div class="tag ref">Literatura, história e boas conversas.</div>
     <p>A leitura de novembro é O Mestre e a Margarida, de Mikhail Bulgákov. Em dezembro, o clube fecha o ano com uma dinâmica especial: a retrospectiva de 2026.</p>
-    <a class="btn" href="#livro-${slug(B[0].t)}">Ver leitura atual</a>
+    <div class="hacts"><a class="btn" href="https://ig.me/m/clubeinconfidentes" target="_blank" rel="noopener">Quero participar</a><a class="btn k" href="#livro-${slug(B[0].t)}">Ver leitura atual</a></div>
+    <p class="join">Encontros presenciais em Araxá, MG. Todo mundo é <span style="white-space:nowrap">bem-vindo</span>: é só mandar uma DM no Instagram para entrar no grupo do WhatsApp.</p>
     <div class="stripes"></div>
   </section>
   ${sh("Próximas leituras","leituras")}
